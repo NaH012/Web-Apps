@@ -1,5 +1,4 @@
 #To see a preview of this program visit https://mikej.tech/pages/index.php/binary-clock/
-{::nomarkdown}
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,5 +54,3 @@
     <div id="pminfo">When the circles are green the time is pm.</div>
   </body>
   </html>
-
-{:/}
