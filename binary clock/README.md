@@ -1,2 +1,2 @@
-#To see a preview of this program visit#
+#To see this program in action visit,#
 ##https://mikej.tech/pages/index.php/binary-clock/##
