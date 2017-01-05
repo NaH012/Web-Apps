@@ -200,6 +200,3 @@ function about() {
   }
   document.getElementById('minutes').innerHTML = helpMin;
 }
-function resizeIframe(obj) {
-  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-}
