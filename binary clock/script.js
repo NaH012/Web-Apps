@@ -1,3 +1,7 @@
+/*
+  This was created by Mike Julander
+  https://mikej.tech
+*/
 var action = "no";
 var state = 12;
 function format(action){
