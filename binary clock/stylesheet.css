@@ -1,0 +1,123 @@
+*{
+  transition: 0.4s;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#clock,#about{
+  display: flex;
+  width: 100%;
+  color: #eee;
+  font-size: 0;
+}
+#clock,
+#about,
+#data,
+button,
+#info,
+#aminfo,
+#pminfo{
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+#hours, #minutes{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.hours, .minutes{
+  padding:20px 0px 20px 0px;
+}
+.hours, .minutes, #value{
+  display: flex;
+  width: 100%;
+  border-bottom: #444 1px solid;
+}
+#value{
+  border-color: transparent;
+  color: transparent;
+  height: auto;
+  font-size: 0px;
+}
+#data{
+  text-align: center;
+}
+#data, .light{
+  margin: auto;
+  width: 50px;
+  border-radius: 50%;
+}
+.light{
+  height: 50px;
+  background-color: dimGrey;
+}
+button:hover,
+button:visited,
+button:active,
+button{
+  color: black;
+  background: #CCC;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+#form{
+  margin-left: 10%;
+}
+#info,
+#aminfo,
+#pminfo{
+  color: transparent;
+  font-size: 0;
+}
+@media only screen and (max-width: 550px){
+  #form{
+    margin-left: 5%;
+  }
+  #data{
+    font-size: 90%;
+  }
+  #hours, #minutes{
+    margin-top: 0;
+  }
+  #about,#clock{
+    flex-direction: column;
+  }
+  #hours, #minutes{
+    margin-left: 0;
+  }
+  .hours, .minutes, #value{
+    width: 100%;
+  }
+  .column{
+    flex-direction: column;
+  }
+  .light, #data{
+    width: 35px;
+  }
+  .light{
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 400px){
+  #form{
+    margin-left: 2%;
+  }
+  button:hover,
+  button:visited,
+  button:active,
+  button{
+    padding: 10px 5px;
+  }
+  #data{
+    font-size: 80%;
+  }
+  .light, #data{
+    width: 30px;
+  }
+  .light{
+    height: 30px;
+  }
+}
