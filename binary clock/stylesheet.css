@@ -16,6 +16,11 @@
   color: #eee;
   font-size: 0;
 }
+a,
+a:hover,
+a:visited{
+  color: inherit;
+}
 #clock,
 #about,
 #data,
