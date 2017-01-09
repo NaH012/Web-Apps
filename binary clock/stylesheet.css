@@ -5,6 +5,9 @@
 *{
   transition: 0.4s;
 }
+body{
+  background-color: #222;
+}
 .column{
   display: flex;
   flex-direction: column;
