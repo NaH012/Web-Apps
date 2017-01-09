@@ -145,14 +145,14 @@ function info(){
         if (window.innerWidth > 400) {
           pmInfo.style.fontSize = "100%";
         }else{
-          pmInfo.style.fontSize = "80%";
+          pmInfo.style.fontSize = "85%";
         }
       }else if(window.am){
         amInfo.style.color = "#eee";
         if (window.innerWidth > 400) {
           amInfo.style.fontSize = "100%";
         }else {
-          amInfo.style.fontSize = "80%";
+          amInfo.style.fontSize = "85%";
         }
       }
     }
