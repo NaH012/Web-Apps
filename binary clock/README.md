@@ -5,4 +5,4 @@
 
 
 
-[binaryclock]: "https://mikej.tech/index.php/binary-clock/"
+[binaryclock]: https://mikej.tech/index.php/binary-clock/
