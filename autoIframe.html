@@ -1,0 +1,30 @@
+<script type="text/javascript">
+  var prevSize = 0;
+  var repeat = 0;
+  var prevState = document.getElementById('clock').contentWindow.document.getElementById('button').innerHTML;
+  var prevForm = document.getElementById('clock').contentWindow.document.getElementById('form').innerHTML;
+  function iframeLoaded() {
+    var iFrameID = document.getElementById('clock');
+    var t = setTimeout(iframeLoaded, 100);
+    var curState = iFrameID.contentWindow.document.getElementById('button').innerHTML;
+    var curForm = iFrameID.contentWindow.document.getElementById('form').innerHTML;
+    if(prevState != curState || prevForm != curForm){
+      prevState = curState;
+      prevForm = curForm
+      repeat = 0;
+    }
+    if(iFrameID) {
+      if(repeat < 6){
+        iFrameID.height = "";
+        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 10 + "px";
+      }
+    }
+    if(repeat < 6){
+      if(iFrameID.contentWindow.document.body.scrollHeight == prevSize){
+        repeat += 1;
+      }
+    }
+    prevSize = iFrameID.contentWindow.document.body.scrollHeight;
+  }
+</script>   
+<iframe id="clock" src="https://mikej.tech/content/index.html" width="100%" frameborder="0" scrolling="no" onload="iframeLoaded()"></iframe>
