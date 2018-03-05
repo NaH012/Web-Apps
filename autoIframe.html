@@ -1,13 +1,23 @@
 <script type="text/javascript">
+  //This script is made to be used in basic frameworks that only allow you to place html code
+  //in the page generator
+  
+  // This is the iframes ID 
+  var id = 'iframe';
+  // These last two variables are the IDs of the elements that the script looks for an update in the html
+  // So it can adjust the height of the iframe
+  var idOne = 'idone';
+  var idTwo = 'idtwo';
+  
   var prevSize = 0;
   var repeat = 0;
-  var prevState = document.getElementById('clock').contentWindow.document.getElementById('button').innerHTML;
-  var prevForm = document.getElementById('clock').contentWindow.document.getElementById('form').innerHTML;
+  var prevState = document.getElementById(id).contentWindow.document.getElementById(idOne).innerHTML;
+  var prevForm = document.getElementById(id).contentWindow.document.getElementById(idTwo).innerHTML;
   function iframeLoaded() {
-    var iFrameID = document.getElementById('clock');
+    var iFrameID = document.getElementById(id);
     var t = setTimeout(iframeLoaded, 100);
-    var curState = iFrameID.contentWindow.document.getElementById('button').innerHTML;
-    var curForm = iFrameID.contentWindow.document.getElementById('form').innerHTML;
+    var curState = iFrameID.contentWindow.document.getElementById(idOne).innerHTML;
+    var curForm = iFrameID.contentWindow.document.getElementById(idTwo).innerHTML;
     if(prevState != curState || prevForm != curForm){
       prevState = curState;
       prevForm = curForm
@@ -26,5 +36,6 @@
     }
     prevSize = iFrameID.contentWindow.document.body.scrollHeight;
   }
-</script>   
-<iframe id="clock" src="https://mikej.tech/content/index.html" width="100%" frameborder="0" scrolling="no" onload="iframeLoaded()"></iframe>
+</script>
+<!-- Make sure you match the ID of the iframe with the variable and the src argument targets the file to load in this iframe!-->
+<iframe id="iframe" src="https://www.example.com/example.html" width="100%" frameborder="0" scrolling="no" onload="iframeLoaded()"></iframe>
