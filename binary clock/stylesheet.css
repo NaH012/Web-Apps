@@ -8,6 +8,9 @@
 body{
   background-color: #222;
 }
+.hidden{
+  display: none !important;
+}
 .column{
   display: flex;
   flex-direction: column;
@@ -17,21 +20,11 @@ body{
   display: flex;
   width: 100%;
   color: #eee;
-  font-size: 0;
 }
-a,
-a:hover,
-a:visited{
+a, a:hover, a:visited{
   color:inherit;
 }
-#clock,
-#about,
-#data,
-button,
-#info,
-#aminfo,
-#pminfo,
-#secs{
+#clock, #about, .values, button, #info, #aminfo, #pminfo, #secs{
   font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 #hours, #minutes, #seconds{
@@ -44,18 +37,16 @@ button,
 .hours, .minutes, #value, .seconds{
   display: flex;
   width: 100%;
-  border-bottom: #444 1px solid;
+  border-bottom: #AAA 1px solid;
 }
-#value{
-  border-color: transparent;
-  color: transparent;
-  height: auto;
-  font-size: 0px;
+.shrunk, #value{
+  width: 75%;
 }
-#data{
+.values{
   text-align: center;
+  color: #eee;
 }
-#data, .light{
+.values, .light{
   margin: auto;
   width: 50px;
   border-radius: 50%;
@@ -64,10 +55,19 @@ button,
   height: 50px;
   background-color: dimGrey;
 }
-button:hover,
-button:visited,
-button:active,
-button{
+.am{
+  background-color: yellow;
+}
+.pm{
+  background-color: #33ff77;
+}
+.military{
+  background-color: aqua;
+}
+#info{
+  color: #eee;
+}
+button:hover, button:visited, button:active, button{
   color: black;
   background: #CCC;
   border: none;
@@ -79,17 +79,11 @@ button{
 #form{
   margin-left: 10%;
 }
-#info,
-#aminfo,
-#pminfo{
-  color: transparent;
-  font-size: 0;
-}
 @media only screen and (max-width: 550px){
   #form{
     margin-left: 5%;
   }
-  #data{
+  .values{
    font-size: 90%;
   }
   #hours, #minutes, #seconds{
@@ -99,13 +93,13 @@ button{
   #about,#clock, #secs{
     flex-direction: column;
   }
-  .hours, .minutes, #value, .seconds{
+  .hours, .minutes, #value, .seconds, .shrink{
     width: 100%;
   }
   .column{
     flex-direction: column;
   }
-  .light, #data{
+  .light, .values{
     width: 35px;
   }
   .light{
@@ -116,16 +110,16 @@ button{
   #form{
     margin-left: 2%;
   }
-  button:hover,
-  button:visited,
-  button:active,
-  button{
+  button:hover, button:visited, button:active, button{
     padding: 10px 5px;
   }
-  #data{
+  .values{
     font-size: 80%;
   }
-  .light, #data{
+  #info{
+    font-size: 85%;
+  }
+  .light, .values{
     width: 30px;
   }
   .light{
