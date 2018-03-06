@@ -10,7 +10,7 @@
   https://mikej.tech
 -->
 </head>
-<body onload="setTime();about();">
+<body onload="setTime();">
   <div class="column">
     <div id="clock">
       <div class="hours" id="hourLED">
@@ -23,7 +23,7 @@
         <div class="light" id="hours_two"></div>
         <div class="light" id="hours_one"></div>
       </div>
-      <div id="hours"></div>
+      <div id="hours" class="hidden"></div>
     </div>
     <div id="about">
       <div class="minutes" id="minLED">
@@ -36,7 +36,7 @@
         <div class="light" id="minutes_two"></div>
         <div class="light" id="minutes_one"></div>
       </div>
-      <div id="minutes"></div>
+      <div id="minutes" class="hidden"></div>
     </div>
     <div id="secs">
       <div class="seconds" id="secLED">
@@ -49,25 +49,28 @@
         <div class="light" id="seconds_two"></div>
         <div class="light" id="seconds_one"></div>
       </div>
-      <div id="seconds"></div>
+      <div id="seconds" class="hidden"></div>
     </div>
-    <div id="value">
-      <div id="data"><h2>128</h2></div>
-      <div id="data"><h2>64</h2></div>
-      <div id="data"><h2>32</h2></div>
-      <div id="data"><h2>16</h2></div>
-      <div id="data"><h2>8</h2></div>
-      <div id="data"><h2>4</h2></div>
-      <div id="data"><h2>2</h2></div>
-      <div id="data"><h2>1</h2></div>
+    <div id="data" class="hidden">
+      <div id="value">
+        <div class="values"><h2>128</h2></div>
+        <div class="values"><h2>64</h2></div>
+        <div class="values"><h2>32</h2></div>
+        <div class="values"><h2>16</h2></div>
+        <div class="values"><h2>8</h2></div>
+        <div class="values"><h2>4</h2></div>
+        <div class="values"><h2>2</h2></div>
+        <div class="values"><h2>1</h2></div>
+      </div>
     </div>
   </div>
   <button type="button" id="button" onclick="assist();">Help Calculate</button>
   <button id="form" onclick="format('switch');">Change to 24 Hour Format</button>
-  <div id="info">This is a clock that displays the time in <a href="https://www.mathsisfun.com/binary-number-system.html" target="_blank">binary</a>.
+  <div id="info" class="hidden">This is a clock that displays the time in <a href="https://www.mathsisfun.com/binary-number-system.html" target="_blank">binary</a>.
     <br>The top row of circles is the hours, the middle row is minutes, and the bottom row is seconds.
-    <br>The grey circles represent 0 or off and the colored circles are 1 or on.</div>
-    <div id="aminfo">When the circles are yellow the time is am.</div>
-    <div id="pminfo">When the circles are green the time is pm.</div>
-  </body>
-  </html>
+    <br>The grey circles represent 0 or off and the colored circles are 1 or on.
+    <div id="aminfo" class="hidden">When the circles are yellow the time is am.</div>
+    <div id="pminfo" class="hidden">When the circles are green the time is pm.</div>
+  </div>
+</body>
+</html>
